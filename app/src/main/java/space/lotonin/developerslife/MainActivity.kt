@@ -1,20 +1,19 @@
 package space.lotonin.developerslife
 
+import space.lotonin.developerslife.Adapter.ScreenSlidePagerAdapter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager2.widget.ViewPager2
-import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import space.lotonin.developerslife.data.Category
 import space.lotonin.developerslife.databinding.ActivityMainBinding
-import space.lotonin.developerslife.ui.content
+import space.lotonin.developerslife.ui.MemFragment
 
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private lateinit var sectionsPagerAdapter: ScreenSlidePagerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,42 +21,26 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        init()
-
-        setupPagerAdapter()
-        setupButtons()
-    }
-    fun init() {
-        val toolbar: MaterialToolbar = findViewById(R.id.toolbar)
-        setSupportActionBar(toolbar)
-    }
-
-    private fun setupPagerAdapter() {
-        sectionsPagerAdapter = ScreenSlidePagerAdapter(supportFragmentManager, lifecycle, this)
+        val sectionsPagerAdapter = ScreenSlidePagerAdapter(supportFragmentManager, lifecycle, this)
         val viewPager: ViewPager2 = binding.viewPager
-        val tabs: TabLayout = binding.TabLayout
+        val tabs: TabLayout = binding.tabs
 
         viewPager.adapter = sectionsPagerAdapter
         TabLayoutMediator(tabs, viewPager) { tab, position ->
             tab.text = "${Category.values()[(position)]}"
         }.attach()
 
-
-        //for activity recreate
-        sectionsPagerAdapter.fragments.clear()
         supportFragmentManager.fragments.forEach {
-            if (it is content) {
-                sectionsPagerAdapter.fragments.add(it.category.id, it)
+            if (it is MemFragment) {
+                sectionsPagerAdapter.fragments.add(it.categoryNumber - 1, it)
             }
         }
-    }
-
-    private fun setupButtons() {
         binding.btnNext.setOnClickListener {
-            sectionsPagerAdapter.fragments[binding.viewPager.currentItem]?.next()
+            sectionsPagerAdapter.fragments[viewPager.currentItem]!!.nextImage()
         }
         binding.btnPrevious.setOnClickListener {
-            sectionsPagerAdapter.fragments[binding.viewPager.currentItem]?.prev()
+            sectionsPagerAdapter.fragments[viewPager.currentItem]!!.prevImage()
         }
     }
+
 }

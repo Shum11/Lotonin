@@ -14,25 +14,27 @@ class Downloader {
     private val parameters = "?json=true"
 
     private val okHttpClient = OkHttpClient.Builder()
-        .connectTimeout(CONNECT_TIMEOUT, TimeUnit.MILLISECONDS)
-        .callTimeout(CALL_TIMEOUT, TimeUnit.MILLISECONDS)
+        .connectTimeout(1000, TimeUnit.MILLISECONDS)
+        .callTimeout(2000, TimeUnit.MILLISECONDS)
         .build()
 
-    private fun createURL(category: String, page: Int=0, isRandom: Boolean): URL {
-        return URL(defaultUrl+category+(if(isRandom) "" else "/$page")+ parameters)
+    private fun createUrl(category: String, page: Int = 0, isRandom: Boolean): URL {
+        return URL(defaultUrl + category + (if (isRandom) "" else "/$page") + parameters)
     }
 
-    fun getData(callback: Callback, category: Category, page: Int=0){
-        val isLatest = category == Category.LATEST
+
+    fun getData(callback: Callback, category: Category, page: Int = 0) {
+        val isRandom = category == Category.RANDOM
         val categoryStr = category.urlParam
-        val url = createURL(categoryStr, page, isLatest)
-        makeRequest(url,callback)
+        val url = createUrl(categoryStr, page, isRandom)
+        makeRequest(url, callback)
     }
 
-    private fun makeRequest(myURL: URL, callback: Callback) {
+    private fun makeRequest(myUrl: URL, callback: Callback) {
         val request: Request = Request.Builder()
-            .url(myURL).build()
-        okHttpClient.newCall(request).enqueue(callback)
+            .url(myUrl)
+            .build()
+        okHttpClient.newCall(request)
+            .enqueue(callback)
     }
-
 }

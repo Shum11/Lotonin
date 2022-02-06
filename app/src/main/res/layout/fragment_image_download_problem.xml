@@ -5,10 +5,10 @@
     android:id="@+id/image_download_problem"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.image_download_problem">
+    tools:context=".ui.ImageDownloadProblemFragment">
 
     <ImageButton
-        android:id="@+id/image_download_problem_btn"
+        android:id="@+id/imageDownloadProblemButton"
         style="@style/MyImageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,5 +30,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/image_download_problem_btn" />
+        app:layout_constraintTop_toTopOf="@id/imageDownloadProblemButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>

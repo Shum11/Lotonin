@@ -5,7 +5,7 @@
     android:id="@+id/internet_problem"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.internet_problem">
+    tools:context=".ui.InternetProblemFragment">
 
     <ImageView
         android:id="@+id/internet_problem_image"

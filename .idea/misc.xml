@@ -29,6 +29,27 @@
         <entry key="..\:/AndroidProject/DevelopersLife/app/src/main/res/layout/fragment_loading.xml" value="0.2015625" />
         <entry key="..\:/AndroidProject/DevelopersLife/app/src/main/res/layout/fragment_server_problem.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidProject/DevelopersLife/app/src/main/res/menu/menu_btn_toolbar.xml" value="0.20520833333333333" />
+        <entry key="..\:/AndroidProject/Lotonin/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.21770833333333334" />
+        <entry key="..\:/AndroidProject/Lotonin/app/src/main/res/drawable/btn_round.xml" value="0.21770833333333334" />
+        <entry key="..\:/AndroidProject/Lotonin/app/src/main/res/drawable/btn_round_press.xml" value="0.21770833333333334" />
+        <entry key="..\:/AndroidProject/Lotonin/app/src/main/res/drawable/disconect.xml" value="0.21770833333333334" />
+        <entry key="..\:/AndroidProject/Lotonin/app/src/main/res/drawable/error_image.xml" value="0.21770833333333334" />
+        <entry key="..\:/AndroidProject/Lotonin/app/src/main/res/drawable/error_outline.xml" value="0.21770833333333334" />
+        <entry key="..\:/AndroidProject/Lotonin/app/src/main/res/drawable/ic_launcher_background.xml" value="0.21770833333333334" />
+        <entry key="..\:/AndroidProject/Lotonin/app/src/main/res/drawable/next.xml" value="0.21770833333333334" />
+        <entry key="..\:/AndroidProject/Lotonin/app/src/main/res/drawable/previous.xml" value="0.21770833333333334" />
+        <entry key="..\:/AndroidProject/Lotonin/app/src/main/res/drawable/refresh.xml" value="0.21770833333333334" />
+        <entry key="..\:/AndroidProject/Lotonin/app/src/main/res/drawable/shadow_background.xml" value="0.21770833333333334" />
+        <entry key="..\:/AndroidProject/Lotonin/app/src/main/res/layout/activity_main.xml" value="0.29438405797101447" />
+        <entry key="..\:/AndroidProject/Lotonin/app/src/main/res/layout/aqdrawda.xml" value="0.29438405797101447" />
+        <entry key="..\:/AndroidProject/Lotonin/app/src/main/res/layout/fragment_content.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidProject/Lotonin/app/src/main/res/layout/fragment_content_problem.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidProject/Lotonin/app/src/main/res/layout/fragment_image_download_problem.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidProject/Lotonin/app/src/main/res/layout/fragment_internet_problem.xml" value="0.2015625" />
+        <entry key="..\:/AndroidProject/Lotonin/app/src/main/res/layout/fragment_loading.xml" value="0.2015625" />
+        <entry key="..\:/AndroidProject/Lotonin/app/src/main/res/layout/fragment_mem.xml" value="0.2015625" />
+        <entry key="..\:/AndroidProject/Lotonin/app/src/main/res/layout/fragment_no_mem_problem.xml" value="0.2015625" />
+        <entry key="..\:/AndroidProject/Lotonin/app/src/main/res/layout/fragment_server_problem.xml" value="0.2015625" />
       </map>
     </option>
   </component>
