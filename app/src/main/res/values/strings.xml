@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Developers Life</string>
+    <string name="latest">Последние</string>
+    <string name="hot">Горячие</string>
+    <string name="top">Лучшие</string>
+    <string name="previous">Назад</string>
+    <string name="next">Следующий</string>
+    <string name="try_again">Попробуйте снова</string>
+    <string name="internet_problem">похоже шаловливые бесы мешают подключиться к интернету</string>
+    <string name="view_description_gif">Текущие</string>
+    <string name="no_images_problem">Упс! Похоже здесь ничего нет.</string>
+    <string name="server_error">сервер недоступен</string>
+    <string name="first_image">нельзя сотворить здесь</string>
+</resources>
